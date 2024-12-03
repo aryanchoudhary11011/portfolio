@@ -183,7 +183,7 @@ const projectsData = [
   },
   {
     logo: "https://s3.ap-south-1.amazonaws.com/chal.chitrakaar/logo+dark.PNG",
-    name: "Cahl Chitrakaar",
+    name: "Chal Chitrakaar",
     desc: "Chal Chitrakaar is a portfolio website for a photographer showcasing expertise in wedding shoots, corporate photography, and a diverse range of professional photography services.",
     // url: "https://www.chalchitrakaar.in/",
     // github: "https://github.com/ashish11011/anime",
