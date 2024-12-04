@@ -21,6 +21,7 @@ export default function Home() {
         <HeroSection />
         <ProjectSection />
         <Experience />
+        <Achivements />
         <SubscriptionSection />
 
         <Footer />
@@ -250,6 +251,33 @@ const Experience = () => {
   );
 };
 
+const Achivements = () => {
+  return (
+    <div
+      id="experience"
+      className="max-w-3xl mt-6 mx-auto w-full flex flex-col gap-6"
+    >
+      <div className="sm:text-5xl text-3xl font-semibold text-gray-800 dark:text-gray-200">
+        Achivements
+      </div>
+      <div className="flex flex-col gap-6">
+        {achivementsData.map((data, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0.7, scaleX: 0.9 }}
+            whileInView={{ opacity: 1, scaleX: 1 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className=""
+          >
+            <ExperienceCard data={data} />
+          </motion.div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
 const ExperienceCard = (props: any) => {
   const {
     logo,
@@ -333,6 +361,38 @@ const experienceData = [
   //   position: "SDE intern",
   //   time: "Apr 2023 - June 2021",
   // },
+];
+
+const achivementsData = [
+  {
+    logo: "",
+    company: "Campus Ambassador at NSS Social Summit (IIT Roorkee), Roorkee",
+    isGolden: false,
+    companyLink: "",
+    // description: "Building a platform for buying and selling Saas products",
+    position: "Mar 2023 - Mar 2023",
+    current: false,
+    time: "June 2024 - Present",
+  },
+  {
+    logo: "",
+    company: "Coordinator at JU Rhythm Annual Function, Jaipur",
+    isGolden: false,
+    companyLink: "",
+    // description: "Created an engaging front end for a car lending website.",
+    position: "Feb 2023 - Feb 2023",
+    time: "Apr 2024 - June 2024",
+  },
+  {
+    logo: "",
+    company: "Core Team Member at Hackathon, Jaipur",
+    isGolden: false,
+    companyLink: "",
+    // description:
+    //   "Developed a fully-fledged dashboard for analyzing energy usage data.",
+    position: "Aug 2022 - Aug 2022",
+    time: "Jan 2024 - Feb 2024",
+  },
 ];
 
 const SubscriptionSection = () => {
